@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Model：User** 
 
-Things you may want to cover:
+欄位名稱 資料型態 說明 
 
-* Ruby version
+name string 姓名 
 
-* System dependencies
+email string 電郵
 
-* Configuration
 
-* Database creation
+**Model：Task** 
 
-* Database initialization
+欄位名稱 資料型態 說明 
 
-* How to run the test suite
+content text 任務內容
 
-* Services (job queues, cache servers, search engines, etc.)
+priority integer 優先順序（high、medium、low）
 
-* Deployment instructions
+status integer 目前狀態（to_do、in_progress、done）
 
-* ...
+started_at datetime 任務開始時間
+
+ended_at datetime 任務結束時間
+
+user_id integer 此任務的user編號
+
+
+**Model：Tag**
+
+欄位名稱 資料型態 說明
+
+title string 標籤名稱
+
+task_id integer 此標籤的task編號
