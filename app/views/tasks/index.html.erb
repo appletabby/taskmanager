@@ -21,6 +21,7 @@
       <td><%= task.ended_at %></td>
       <td>
         <%= link_to "編輯", edit_task_path(task) %>
+        <%= link_to "刪除", task_path(task), method: "delete", data: {confirm: "確定要刪除嗎？"} %>
       </td>
     </tr>
     <% end %>
