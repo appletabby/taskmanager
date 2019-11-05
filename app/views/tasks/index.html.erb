@@ -1,0 +1,29 @@
+<h1>任務列表</h1>
+
+<%= link_to "新增任務", new_task_path %>
+
+<table>
+  <thead></thead>
+    <tr>
+      <td>任務內容</td>
+      <td>優先順序</td>
+      <td>目前狀態</td>
+      <td>開始時間</td>
+      <td>結束時間</td>
+    </tr>
+  <tbody>
+    <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.content %></td>
+      <td><%= task.priority %></td>
+      <td><%= task.status %></td>
+      <td><%= task.started_at %></td>
+      <td><%= task.ended_at %></td>
+      <td>
+        <%= link_to "編輯", edit_task_path(task) %>
+        <%= link_to "刪除", task_path(task), method: "delete", data: {confirm: "確定要刪除嗎？"} %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
