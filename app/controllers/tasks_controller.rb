@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :find_task, only: [:edit, :update, :destroy]
+  before_action :find_task, only: [:edit, :show , :update, :destroy]
 
   def index
     @tasks = Task.all
@@ -22,6 +22,9 @@ class TasksController < ApplicationController
   def edit
   end
 
+  def show
+  end
+
   def update
     if @task.update(task_params)
       redirect_to tasks_path, notice: "資料更新成功！"
@@ -41,7 +44,10 @@ class TasksController < ApplicationController
   end
 
   def find_task
-    @task = Task.find(params[:id])  
+    begin
+      @task = Task.find(params[:id]) 
+    rescue
+    end
   end
 
 end
