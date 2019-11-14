@@ -1,0 +1,12 @@
+<% if @task %>
+  <h1><%= @task.content %></h1>
+
+  <ul>
+    <li>優先順序：<%= @task.priority %></li>
+    <li>目前狀態：<%= @task.status %></li>
+    <li>開始時間：<%= @task.started_at %></li>
+    <li>結束時間：<%= @task.ended_at %></li>
+  </ul>
+<% else %>
+  <h1>沒有這個任務</h1>
+<% end %>

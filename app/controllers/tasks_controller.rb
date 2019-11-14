@@ -22,6 +22,10 @@ class TasksController < ApplicationController
   def edit
   end
 
+  def show
+    @task = Task.find_by(id: params[:id]) 
+  end
+
   def update
     if @task.update(task_params)
       redirect_to tasks_path, notice: "資料更新成功！"
@@ -41,7 +45,7 @@ class TasksController < ApplicationController
   end
 
   def find_task
-    @task = Task.find(params[:id])  
+    @task = Task.find(params[:id]) 
   end
 
 end
