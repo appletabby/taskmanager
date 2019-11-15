@@ -42,6 +42,7 @@ group :development, :test do
   gem 'hirb-unicode', '~> 0.0.5'
   gem 'rspec-rails', '~> 3.9'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'rails-controller-testing', '~> 1.0' # Rails5以後版本需追加
 end
 
 group :development do
