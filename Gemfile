@@ -43,6 +43,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.9'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
   gem 'rails-controller-testing', '~> 1.0' # Rails5以後版本需追加
+  gem 'shoulda-matchers', '~> 4.1', '>= 4.1.2'
 end
 
 group :development do
