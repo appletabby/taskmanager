@@ -1,17 +1,17 @@
 <%= form_for(task) do |f| %>
-<%= f.label :content, "任務內容" %>
+<%= f.label :content, t('views.task_content') %>
 <%= f.text_area :content %> <br />
 
-<%= f.label :priority, "優先順序" %>
-<%= f.text_field :priority %>（high, medium, low）<br />
+<%= f.label :priority, t('views.priority') %>
+<%= f.text_field :priority %>（<%= t('views.priority_content') %>）<br />
 
-<%= f.label :status, "目前狀態" %>
-<%= f.text_field :status %>（to_do, in_progress, done）<br />
+<%= f.label :status, t('views.status') %>
+<%= f.text_field :status %>（<%= t('views.status_content') %>）<br />
 
-<%= f.label :started_at, "開始時間" %>
+<%= f.label :started_at, t('views.started_time') %>
 <%= f.text_field :started_at %> <br />
 
-<%= f.label :ended_at, "結束時間" %>
+<%= f.label :ended_at, t('views.ended_time') %>
 <%= f.text_field :ended_at %> <br />
 
 <%= f.submit %>
