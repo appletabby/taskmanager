@@ -2,8 +2,8 @@
   <h1><%= @task.content %></h1>
 
   <ul>
-    <li><%= t('views.priority') %>：<%= @task.priority %></li>
-    <li><%= t('views.status') %>：<%= @task.status %></li>
+    <li><%= t('views.priority') %>：<%= I18n.t :"task.#{@task.priority}" %></li>
+    <li><%= t('views.status') %>：<%= I18n.t :"task.#{@task.status}" %></li>
     <li><%= t('views.started_time') %>：<%= @task.started_at %></li>
     <li><%= t('views.ended_time') %>：<%= @task.ended_at %></li>
   </ul>
