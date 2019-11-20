@@ -55,14 +55,12 @@ zh-Tw:
     destroy:
       notice: "任務刪除成功！"
 
-  model:
-    priority: 
-      high: "高"
-      medium: "中"
-      low: "低"
-    status:
-      to_do: "待處理"
-      in_progress: "進行中"
-      done: "已完成"
+  task:
+    high: "高"
+    medium: "中"
+    low: "低"
+    to_do: "待處理"
+    in_progress: "進行中"
+    done: "已完成"
 
 

@@ -55,12 +55,12 @@ en:
     destroy:
       notice: "Task has been removed！"
 
-  model:
-    priority: 
-      high: "high"
-      medium: "medium"
-      low: "low"
-    status:
-      to_do: "to do"
-      in_progress: "in progress"
-      done: "done"
+  task:
+    high: "high"
+    medium: "medium"
+    low: "low"
+    to_do: "to do"
+    in_progress: "in progress"
+    done: "done"
+
+  

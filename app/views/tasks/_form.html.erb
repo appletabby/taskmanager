@@ -3,10 +3,10 @@
 <%= f.text_area :content %> <br />
 
 <%= f.label :priority, t('views.priority') %>
-<%= f.text_field :priority %>（<%= t('views.priority_content') %>）<br />
+<%= f.select :priority, Task.priorities.keys.map {|key| [t("task.#{key}"), key]} %><br />
 
 <%= f.label :status, t('views.status') %>
-<%= f.text_field :status %>（<%= t('views.status_content') %>）<br />
+<%= f.select :status, Task.statuses.keys.map {|key| [t("task.#{key}"), key]} %><br />
 
 <%= f.label :started_at, t('views.started_time') %>
 <%= f.text_field :started_at %> <br />

@@ -15,8 +15,8 @@
     <% @tasks.each do |task| %>
     <tr>
       <td><%= link_to task.content, task_path(task) %></td>
-      <td><%= task.priority %></td>
-      <td><%= task.status %></td>
+      <td><%= I18n.t :"task.#{task.priority}" %></td>
+      <td><%= I18n.t :"task.#{task.status}" %></td>
       <td><%= task.started_at %></td>
       <td><%= task.ended_at %></td>
       <td>
