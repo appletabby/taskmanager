@@ -1,27 +1,27 @@
-<h1>任務列表</h1>
+<h1><%= t('views.task_list') %></h1>
 
-<%= link_to "新增任務", new_task_path %>
+<%= link_to t('views.create_task'), new_task_path %>
 
 <table>
   <thead></thead>
     <tr>
-      <td>任務內容</td>
-      <td>優先順序</td>
-      <td>目前狀態</td>
-      <td>開始時間</td>
-      <td>結束時間</td>
+      <td><%= t('views.task_content') %></td>
+      <td><%= t('views.priority') %></td>
+      <td><%= t('views.status') %></td>
+      <td><%= t('views.started_time') %></td>
+      <td><%= t('views.ended_time') %></td>
     </tr>
   <tbody>
     <% @tasks.each do |task| %>
     <tr>
       <td><%= link_to task.content, task_path(task) %></td>
-      <td><%= task.priority %></td>
-      <td><%= task.status %></td>
+      <td><%= I18n.t :"task.#{task.priority}" %></td>
+      <td><%= I18n.t :"task.#{task.status}" %></td>
       <td><%= task.started_at %></td>
       <td><%= task.ended_at %></td>
       <td>
-        <%= link_to "編輯", edit_task_path(task) %>
-        <%= link_to "刪除", task_path(task), method: "delete", data: {confirm: "確定要刪除嗎？"} %>
+        <%= link_to t('views.edit') , edit_task_path(task) %>
+        <%= link_to t('views.delete'), task_path(task), method: "delete", data: {confirm: t('views.del_confirm_msg') } %>
       </td>
     </tr>
     <% end %>

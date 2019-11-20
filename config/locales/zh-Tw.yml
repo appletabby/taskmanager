@@ -29,38 +29,38 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+zh-Tw:
   views:
-    task_list: "Task List"
-    create_task: "Create Task"
-    task_content: "Task Content"
-    priority: "Priority"
-    status: "Status"
-    started_time: "Start Time"
-    ended_time: "End Time"
-    edit: "Edit"
-    delete: "Delete"
-    del_confirm_msg: "Are you sure？"
-    back_to_task_list: "Back to task list"
-    edit_task: "Edit Task"
-    no_such_task: "No such task"
-    priority_content: "high, medium, low"
-    status_content: "to do, in progress, done"
+    task_list: "任務列表"
+    create_task: "新增任務"
+    task_content: "任務內容"
+    priority: "優先順序"
+    status: "目前狀態"
+    started_time: "開始時間"
+    ended_time: "結束時間"
+    edit: "編輯"
+    delete: "刪除"
+    del_confirm_msg: "確定要刪除嗎？"
+    back_to_task_list: "回任務列表"
+    edit_task: "編輯任務"
+    no_such_task: "沒有這個任務"
+    priority_content: "高、中、低"
+    status_content: "待處理、進行中、已完成"
 
   controller:
     create:
-      notice: "Task has been created！"
+      notice: "新增任務成功！"
     update:
-      notice: "Task has been updated！"
+      notice: "資料更新成功！"
     destroy:
-      notice: "Task has been removed！"
+      notice: "任務刪除成功！"
 
   task:
-    high: "high"
-    medium: "medium"
-    low: "low"
-    to_do: "to do"
-    in_progress: "in progress"
-    done: "done"
+    high: "高"
+    medium: "中"
+    low: "低"
+    to_do: "待處理"
+    in_progress: "進行中"
+    done: "已完成"
 
-  
+
