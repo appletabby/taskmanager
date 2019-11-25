@@ -33,4 +33,17 @@ RSpec.feature "TasksIndex", type: :feature do
     expect { click_link '刪除' }.to change(Task, :count).by(-1)
   end
 
+  scenario "tasks are ordered by created time" do
+    task_1 = FactoryBot.create(:task, content: 'content1', created_at: '2019-11-25 08:00:00')
+    task_2 = FactoryBot.create(:task, content: 'content2', created_at: '2019-11-25 10:00:00')
+    
+    visit tasks_path
+    within 'tbody tr:nth-child(2)' do
+      expect(page).to have_text 'content2'
+    end
+    within 'tbody tr:nth-child(3)' do
+      expect(page).to have_text 'content1'
+    end
+  end
+
 end
